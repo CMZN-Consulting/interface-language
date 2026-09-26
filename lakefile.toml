@@ -1,0 +1,10 @@
+name = "InterfaceLanguage"
+version = "0.1.0"
+defaultTargets = ["InterfaceLanguage"]
+
+[[lean_lib]]
+name = "InterfaceLanguage"
+
+[[require]]
+name = "mundus"
+path = "../mundus"
