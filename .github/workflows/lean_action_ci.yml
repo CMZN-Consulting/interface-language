@@ -27,7 +27,13 @@ jobs:
           repository: CMZN-Consulting/memory-artifact
           path: memory-artifact
 
+      - name: Setup Elan
+        run: |
+          curl -O --location https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh
+          sh elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+
       - name: Build interface-language
-        uses: leanprover/lean-action@v1
-        with:
-          working-directory: interface-language
+        run: |
+          cd interface-language
+          lake build
