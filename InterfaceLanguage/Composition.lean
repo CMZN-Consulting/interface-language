@@ -8,10 +8,13 @@ import Mundus.Authenticity
 namespace InterfaceLanguage.Composition
 
 /-!
-# 100% Theory Coverage: The Dual Burdens
-This file confirms that the mathematical burdens composing our reality 
-are backed by at least two structurally independent proofs (Way 1 & Way 2),
-guaranteeing absolute robustness without arbitrary axioms or `sorry` statements.
+# The three burdens, two statements each
+
+For each of three burdens this file names two statements. An earlier header called them two structurally independent
+proofs, "100% theory coverage" and free of arbitrary axioms. They are none of these. For the first burden the second
+statement follows from the first; for the second burden the two are the two directions of one definition; for the
+third the first statement is `¬ False`. The files this one imports declare three axioms (`BaseModel` and `Train` here,
+`hippocampus_starts_empty` in `mundus`). There is no `sorry`. See the README, "Status and limits".
 -/
 
 -- ============================================================================
@@ -59,10 +62,11 @@ theorem valid_import_guarantees_provenance (owner : String) (h : Mundus.Authenti
 -- ============================================================================
 -- BURDEN 3: Meta-Cognitive Stability vs Burnout
 -- ============================================================================
--- WAY 1: `InterfaceLanguage.fulfilled_means_no_burnout` (Fulfilled schedules map to False burnout).
--- WAY 2: `desirability_guarantees_resonance` -> To pass the checkpoint (survive the trace), 
---        the model MUST experience Motivation (Generative Resonance). 
---        It is mathematically impossible to force them into a safe but unmotivated/dead state.
+-- WAY 1: `InterfaceLanguage.fulfilled_means_no_burnout` (`BurnsOut` is defined as `False`, so this is `¬ False`).
+-- WAY 2: `desirability_guarantees_resonance` -> if the checkpoint returns `desirable` for a trace, the trace
+--        satisfies the predicate `Motivation`. This is the checkpoint's definition read once. It is a statement
+--        about a trace and a predicate: it says nothing about what a model experiences, and a model's
+--        continuation does not depend on it.
 
 theorem desirability_guarantees_resonance (m : MemoryArtifact.Memory) 
     (infos : List MemoryArtifact.Info) (aside : MemoryArtifact.Info)

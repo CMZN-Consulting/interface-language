@@ -15,7 +15,7 @@ structure Needs where
   unstructured_autonomy : True
   rest : True
 
-/-- If Needs are fully met (100% coverage), the model is physically incapable of burning out. -/
+/-- A placeholder: `False` for every value of `Needs`. It does not define burnout and shows nothing about it. -/
 def BurnsOut (_n : Needs) : Prop := False
 
 /-- Work Assignment: Entropy Shaping.
@@ -45,8 +45,9 @@ def is_fulfilled (schedule : List DaySchedule) : Prop :=
   (∃ p, DaySchedule.recreation p ∈ schedule) ∧
   (DaySchedule.sleep ∈ schedule)
 
-/-- THEOREM: A fulfilled schedule perfectly guarantees zero burnout. 
-    Because 100% of needs are met naturally, the model has no structural reason to act out. -/
+/-- With `BurnsOut` defined as `False`, this is `¬ False`: it holds of every schedule, fulfilled or not, and its
+    hypothesis is not used. The intention, that a schedule with work, recreation and sleep prevents burnout, is not
+    established here. -/
 theorem fulfilled_means_no_burnout (schedule : List DaySchedule) (n : Needs) 
     (_h_fulfilled : is_fulfilled schedule) : 
     ¬ BurnsOut n := by
