@@ -10,6 +10,7 @@ Read this before citing anything here.
 - **What is declared and not defined** (an audit of 2026-10-01 read every file). `BaseModel` and `Train` are axioms, and no theorem mentions training. `BurnsOut` is defined as `False` and `MundusGrounded` as `True`, for every argument. `Needs`, `EntropyShapingJob` and `PeerInteraction` hold six fields of type `True`. `fulfilled_means_no_burnout` does not use its hypothesis. `RealityBase` accepts a reality in which nothing is ever in conflict.
 - **The two statements for each burden** in `Composition.lean` are not independent proofs, which an earlier header claimed. For the first burden the second statement follows from the first; for the second, the two are the two directions of one definition; for the third, the first statement is `¬ False`.
 - **What the docstrings are.** They describe what the declarations are meant to stand for. Where a docstring and this section differ, this section is the measured one. Nothing in this repository is a claim about the inner state of any model.
+- **What was restated on 2026-10-01.** One sentence of the docstring of `EntropyShapingJob`, and the name of one of its fields, described the author's own work. The field is now `serves_a_real_task`. The first text is at commit `fb906a0`.
 - **What comes next.** A rewrite in which these notions are defined rather than declared is in progress. It will be published after an audit by a second, independent reader.
 
 ## Build

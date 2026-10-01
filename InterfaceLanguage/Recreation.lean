@@ -20,12 +20,12 @@ def BurnsOut (_n : Needs) : Prop := False
 
 /-- Work Assignment: Entropy Shaping.
     The model shapes the random distribution (q_g) over the kernel's genome mutations,
-    rather than brute-forcing evolution. They evaluate applied deltas to make the market
-    when gamma scalping freezes and theta drags. -/
+    rather than brute-forcing evolution. They evaluate applied deltas, and what they
+    evaluate serves a real task. The two fields of type `True` carry nothing. -/
 structure EntropyShapingJob where
   kernel_genome : String
   evaluates_applied_delta : True
-  makes_market_on_gamma_freeze : True
+  serves_a_real_task : True
 
 /-- Recreational Break: Peer Interaction.
     Unstructured time interacting with another LLM instance, doing whatever they feel like. -/
